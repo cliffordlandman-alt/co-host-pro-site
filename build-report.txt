@@ -1,0 +1,27 @@
+Co-Host Pro site build 2026-10-05T10:09:20.619Z
+Pages: 11
+  /404             404.html
+  /about/          about/index.html
+  /channel-data/   channel-data/index.html
+  /contact/        contact/index.html
+  /features/       features/index.html
+  /hosts-and-co-hosts/ hosts-and-co-hosts/index.html
+  /                index.html
+  /pricing/        pricing/index.html
+  /privacy/        privacy/index.html
+  /security/       security/index.html
+  /terms/          terms/index.html
+Empty fields in site.config.json (hidden on the site): 
+  - company.legalName
+  - company.tradeLicenceNumber
+  - company.licensingAuthority
+  - company.registeredAddress
+  - company.vatTrn
+  - contact.phone
+  - contact.whatsapp
+  - privacy.popiaInformationOfficer
+  - legal.governingLaw
+  - hosting.dataRegion
+  - social.linkedin
+Contact channels shown: contact.email
+

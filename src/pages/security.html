@@ -1,0 +1,70 @@
+<!--meta {"title":"Security and data handling · Co-Host Pro","description":"How Co-Host Pro protects guest, owner and booking data: what is in place today, what we commit to before handling Airbnb API data, data handling, retention and how to report a security issue.","path":"/security/","nav":"security"}-->
+<div class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Security &amp; data</span>
+    <h1>How we protect and handle data</h1>
+    <p class="lead">This page says plainly what is in place today and what we commit to before Co-Host Pro handles data from Airbnb's API or opens to other businesses.</p>
+  </div>
+</div>
+<section>
+  <div class="wrap prose">
+    <p class="updated">Last updated: {{site.policiesLastUpdated}}</p>
+    <div class="toc"><strong>On this page</strong><ol><li><a href="#today">In place today</a></li><li><a href="#commitments">Commitments before API access</a></li><li><a href="#handling">How data is handled</a></li><li><a href="#retention">Retention and deletion</a></li><li><a href="#incidents">Incidents</a></li><li><a href="#report">Reporting a security issue</a></li></ol></div>
+
+    <h2 id="today">In place today</h2>
+    <p>The Co-Host Pro app currently runs privately to manage the holiday homes we look after in Dubai and our Airbnb homes in Gqeberha, South Africa. These controls are built into the software and in use now:</p>
+    <ul>
+      <li><strong>Passwords are hashed</strong> with bcrypt. They are never stored in plain text.</li>
+      <li><strong>Signed sessions that expire.</strong> Logins use signed tokens that expire after 7 days.</li>
+      <li><strong>Role-based access.</strong> Admin, manager, reservations, accountant, operations, cleaner and maintenance roles each see only what the job needs. For example, cleaners see their cleaning jobs, not finances.</li>
+      <li><strong>Owner portal is read-only and scoped.</strong> Owners log in with a six-digit one-time code that expires after 15 minutes and allows a limited number of attempts. They can only see their own properties.</li>
+      <li><strong>Activity log.</strong> Changes to bookings, income and expenses are recorded with who made them and the old and new values.</li>
+      <li><strong>Secrets kept out of logs.</strong> Private iCal calendar links, passwords, tokens and keys are blanked out before anything is written to the activity log, and again when it's shown.</li>
+      <li><strong>Locked financial history.</strong> Bookings and charges in a month whose owner statement was sent or paid can't be changed. Properties, owners and staff with history can't be deleted.</li>
+      <li><strong>Nothing is sent unless switched on.</strong> Outgoing email and WhatsApp messages are off by default and need an explicit server setting to turn on.</li>
+      <li><strong>Safe testing.</strong> Changes are checked with automated tests before release. Test copies run with channel sync switched off, and demo material (like the screenshots on this site) uses invented data only.</li>
+    </ul>
+
+    <h2 id="commitments">Commitments before handling Airbnb API data or opening to other businesses</h2>
+    <p>Co-Host Pro does not connect to Airbnb's API today. Before it does, and before other businesses use Co-Host Pro, we will have the following in place. They match the minimum security requirements in Airbnb's public API Terms.</p>
+    <ul>
+      <li><strong>Multi-factor authentication</strong> for everyone who can access the system, its data or any API credentials. Two-step login is in development. No shared passwords.</li>
+      <li><strong>HTTPS only</strong> for every connection, with modern cipher suites.</li>
+      <li><strong>Managed hosting</strong> with encrypted storage, automatic daily backups and an off-site backup copy, plus regular restore tests.<!--if:hosting.dataRegion--> Data is hosted in {{hosting.dataRegion}}.<!--/if--></li>
+      <li><strong>Least privilege.</strong> Access to production data and API credentials only for people whose job needs it.</li>
+      <li><strong>Secure development.</strong> Testing against the OWASP Top 10, vulnerability scans at least every quarter, and security patches applied within 7 days (critical), 30 days (high), 90 days (medium) and 180 days (low).</li>
+      <li><strong>Protected devices.</strong> Computers used to run or administer Co-Host Pro use full-disk encryption, password protection with multi-factor authentication and up-to-date anti-malware.</li>
+      <li><strong>Vendor reviews.</strong> We review the security of the providers we rely on, such as hosting and email delivery.</li>
+    </ul>
+
+    <h2 id="handling">How data is handled</h2>
+    <table>
+      <thead><tr><th scope="col">Data</th><th scope="col">Why it's used</th><th scope="col">Who can see it</th></tr></thead>
+      <tbody>
+        <tr><td>Bookings: dates, property, channel, confirmation code, guest name and contact details, number of guests</td><td>Run the calendar, cleaning, guest check-in and statements</td><td>The host's own team, by role</td></tr>
+        <tr><td>Booking amounts: guest total, fees, payouts, co-host payouts</td><td>Work out VAT, Tourism Dirham, fees and the owner's share</td><td>Admins, managers and accountants. Owners see their own properties' published statements.</td></tr>
+        <tr><td>Guest ID status (pending, collected, verified by Airbnb)</td><td>Track Dubai guest registration requirements</td><td>The host's own team</td></tr>
+        <tr><td>Owner details and statements</td><td>Produce and share monthly statements</td><td>The host's team and that owner only</td></tr>
+        <tr><td>Staff accounts</td><td>Log in and assign work</td><td>Admins</td></tr>
+        <tr><td>Channel iCal calendar links</td><td>Read stays and blocked dates</td><td>Treated as secrets, hidden from logs</td></tr>
+      </tbody>
+    </table>
+    <p>Data from one host's account is used only for that host. We don't sell data, we don't use it for advertising, and we don't combine different hosts' data. For channel data specifically, see <a href="/channel-data/">How we use Airbnb and other channel data</a>.</p>
+
+    <h2 id="retention">Retention and deletion</h2>
+    <ul>
+      <li>We keep data only as long as it's needed to provide the service, or as long as the law requires. Examples are accounting records and Dubai guest records, which hosts must keep for set periods.</li>
+      <li>A customer can ask for an export of their data, or for it to be deleted, at any time.</li>
+      <li>When a customer leaves, or disconnects a channel, we delete the related data within 30 days, except records we must keep by law. Where we must keep them, we say which law.</li>
+      <li>Data received through Airbnb's API will be kept only while it's needed to deliver the host's service, and deleted as Airbnb's API Terms require.</li>
+    </ul>
+
+    <h2 id="incidents">Incidents</h2>
+    <p>If we find or suspect a security incident, we will contain it, investigate it and tell affected customers without undue delay. Where a regulator or a channel partner must be told, we will tell them within the time they require. For Airbnb, that is within one hour for incidents involving Airbnb data or credentials and within 24 hours for others, as set out in Airbnb's API Terms.</p>
+
+    <h2 id="report">Reporting a security issue</h2>
+    <!--if:contact.securityEmail--><p>Please email <a href="{{mailto:contact.securityEmail}}">{{contact.securityEmail}}</a> with what you found and how to reproduce it.</p><!--/if-->
+    <!--ifnot:contact.securityEmail--><p>Please use the details on our <a href="/contact/">Contact page</a>, with what you found and how to reproduce it.</p><!--/if-->
+    <p>Please don't access, change or delete other people's data, and give us reasonable time to fix the issue before telling anyone else. We won't take action against anyone who reports an issue in good faith and follows these rules.</p>
+  </div>
+</section>

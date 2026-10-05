@@ -1,0 +1,50 @@
+<!--meta {"title":"Contact · Co-Host Pro","description":"Contact Co-Host Pro about early access, partnerships, privacy requests or security reports.","path":"/contact/","nav":"contact"}-->
+<div class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1>Contact Co-Host Pro</h1>
+    <p class="lead">For early access, partnerships, privacy requests or security reports.</p>
+  </div>
+</div>
+<section>
+  <div class="wrap grid g2" style="align-items:start">
+    <!--if:contact.email|contact.phone|contact.whatsapp-->
+    <div class="card">
+      <h2 style="font-size:1.35rem">Reach us</h2>
+      <ul class="contact-list">
+        <!--if:contact.email--><li>Email<br><a href="{{mailto:contact.email}}">{{contact.email}}</a></li><!--/if-->
+        <!--if:contact.phone--><li>Phone<br><a href="{{tel:contact.phone}}">{{contact.phone}}</a></li><!--/if-->
+        <!--if:contact.whatsapp--><li>WhatsApp<br><a href="{{wa:contact.whatsapp}}" rel="noopener">{{contact.whatsapp}}</a></li><!--/if-->
+      </ul>
+    </div>
+    <!--/if-->
+    <!--if:contact.privacyEmail|contact.securityEmail-->
+    <div class="card">
+      <h2 style="font-size:1.35rem">Privacy and security</h2>
+      <ul class="contact-list">
+        <!--if:contact.privacyEmail--><li>Privacy and data requests<br><a href="{{mailto:contact.privacyEmail}}">{{contact.privacyEmail}}</a></li><!--/if-->
+        <!--if:contact.securityEmail--><li>Report a security issue<br><a href="{{mailto:contact.securityEmail}}">{{contact.securityEmail}}</a></li><!--/if-->
+      </ul>
+    </div>
+    <!--/if-->
+    <div class="card">
+      <h2 style="font-size:1.35rem">Company</h2>
+      <dl class="facts">
+        <dt>Brand</dt><dd>{{brand.name}}</dd>
+        <!--if:company.legalName--><dt>Legal entity</dt><dd>{{company.legalName}}</dd><!--/if-->
+        <!--if:company.tradeLicenceNumber--><dt>Trade licence</dt><dd>{{company.tradeLicenceNumber}}<!--if:company.licensingAuthority--> ({{company.licensingAuthority}})<!--/if--></dd><!--/if-->
+        <!--if:company.registeredAddress--><dt>Address</dt><dd>{{company.registeredAddress}}</dd><!--/if-->
+        <!--ifnot:company.registeredAddress--><dt>Based in</dt><dd>{{brand.baseCity}}</dd><!--/if-->
+        <dt>Founder</dt><dd>{{brand.founderName}}</dd>
+      </dl>
+    </div>
+    <div class="card">
+      <h2 style="font-size:1.35rem">What to include</h2>
+      <ul>
+        <li><strong>Early access:</strong> how many properties you run, where, and which channels you use.</li>
+        <li><strong>Privacy requests:</strong> what you'd like us to do (access, correct, delete) and how we can confirm who you are. See the <a href="/privacy/">privacy policy</a>.</li>
+        <li><strong>Security reports:</strong> what you found and how to reproduce it. Please don't access other people's data. See <a href="/security/">Security &amp; data</a>.</li>
+      </ul>
+    </div>
+  </div>
+</section>

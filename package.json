@@ -1,0 +1,12 @@
+{
+  "name": "co-host-pro-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static company website for Co-Host Pro (draft, not published)",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "serve": "node tools/serve.mjs",
+    "screens": "node tools/screens.mjs",
+    "zip": "node tools/build.mjs && python3 tools/zip.py"
+  }
+}

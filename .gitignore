@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+
+# Optional local overrides. The committed site uses site.config.json.
+# Point SITE_CONFIG at a local file when you need one; do not commit it.
+site.config.local.json
+*.local.json
+.env
+.env.*
+
+# Output of `npm run zip`. dist/ stays committed so the site can be deployed as-is.
+co-host-pro-site-dist.zip
+
+# Output of `npm run screens`.
+screens/

@@ -1,0 +1,54 @@
+<!--meta {"title":"How we use Airbnb and other channel data · Co-Host Pro","description":"How Co-Host Pro uses booking data from Airbnb, Booking.com and Vrbo today, how Airbnb data would be used if Co-Host Pro is approved for Airbnb's API, and what it will never be used for.","path":"/channel-data/","nav":"security"}-->
+<div class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Channel data</span>
+    <h1>How we use Airbnb and other channel data</h1>
+    <p class="lead">Booking data from Airbnb, Booking.com and Vrbo is used for one thing: helping the host who owns it run their properties.</p>
+  </div>
+</div>
+<section>
+  <div class="wrap prose">
+    <p class="updated">Last updated: {{site.policiesLastUpdated}}</p>
+    <div class="note"><strong>Status:</strong> Co-Host Pro is not an Airbnb partner and does not use Airbnb's API today. It is independent software and is not affiliated with, endorsed by or sponsored by Airbnb, Booking.com or Vrbo.</div>
+
+    <h2>How booking data reaches Co-Host Pro today</h2>
+    <ol>
+      <li><strong>iCal calendar links.</strong> A host copies the iCal calendar export link from their own Airbnb, Booking.com or Vrbo listing into Co-Host Pro. Co-Host Pro reads it about every 15 minutes. It brings in the dates of stays and blocked dates and a booking reference, and no amounts. These links are private, so Co-Host Pro treats them as secrets and hides them from the activity log.</li>
+      <li><strong>Files the host chooses to import.</strong> A host can download their own reservations export or reservation breakdown from their Airbnb account and import it. Co-Host Pro shows a preview, matched by confirmation code, and changes nothing until the host ticks the rows to apply.</li>
+    </ol>
+    <p>The calendar connection only reads. It doesn't change listings, prices or availability on any channel. Co-Host Pro does not read or copy Airbnb listing pages.</p>
+
+    <h2>What the data is used for</h2>
+    <ul>
+      <li>Showing stays and blocked dates on the host's calendar and flagging possible double bookings.</li>
+      <li>Creating a cleaning task for each checkout.</li>
+      <li>Working out VAT, Tourism Dirham, channel fees, management fees and the owner's share for each booking.</li>
+      <li>Producing owner statements, income per property and the host's company statement.</li>
+      <li>Tracking guest ID status for Dubai guest registration.</li>
+    </ul>
+
+    <h2>If Co-Host Pro is approved for Airbnb's API</h2>
+    <p>If Airbnb approves Co-Host Pro for API access, Airbnb data will be used only to provide the host services described above to the host who connected their Airbnb account. In particular:</p>
+    <ul>
+      <li><strong>The host is in control.</strong> A host connects their own Airbnb account and can disconnect it at any time. We act on the host's instructions for their data.</li>
+      <li><strong>Only what's needed.</strong> We will request only the access needed for these services, for example reservations, booking amounts and payouts, and calendar availability. We will use the data only for those services.</li>
+      <li><strong>Inside the host's account only.</strong> Airbnb data is visible only to the host's own team, according to their roles, and to the host's owners for their own properties' statements. Non-public guest content is not shown to anyone else without the guest's consent.</li>
+      <li><strong>Security first.</strong> The controls on our <a href="/security/">Security &amp; data</a> page, including multi-factor authentication and HTTPS only, will be in place before any API connection.</li>
+      <li><strong>Deletion.</strong> When a host disconnects or leaves, their Airbnb data is deleted within 30 days, except where the law requires us to keep a record. We also delete data when Airbnb asks us to.</li>
+      <li><strong>Host terms.</strong> Hosts who use an Airbnb API connection through Co-Host Pro remain bound by Airbnb's own terms. Our <a href="/terms/">terms of service</a> say so.</li>
+    </ul>
+
+    <h2>What channel data is never used for</h2>
+    <ul>
+      <li>Advertising or marketing, including targeting or serving ads.</li>
+      <li>Selling, renting or sharing it with third parties, other than service providers that process it for us under contract to run Co-Host Pro.</li>
+      <li>Building databases or market-wide statistics, pricing comparisons or profiles beyond the host's own account.</li>
+      <li>Combining one host's data with another host's.</li>
+      <li>Processing payments for Airbnb bookings. Co-Host Pro records amounts, it doesn't move money.</li>
+      <li>Collecting or using information about guests under 18 received through Airbnb's API.</li>
+    </ul>
+
+    <h2>Questions</h2>
+    <p>See our <a href="/privacy/">privacy policy</a>, or <a href="/contact/">contact us</a>.</p>
+  </div>
+</section>

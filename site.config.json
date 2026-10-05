@@ -1,0 +1,39 @@
+{
+  "_readme": "Business details for the Co-Host Pro website. Leave a value as \"\" if you don't have it yet: the build hides every empty field (no placeholders are ever shown). Run `npm run build` after editing. Only fill in details that are true and verifiable.",
+  "brand": {
+    "name": "Co-Host Pro",
+    "tagline": "Short-term rental management and property management software in Dubai and South Africa",
+    "founderName": "Clifford Landman",
+    "baseCity": "Dubai, United Arab Emirates"
+  },
+  "site": {
+    "url": "https://co-host.pro",
+    "policiesLastUpdated": "4 October 2026"
+  },
+  "company": {
+    "legalName": "",
+    "tradeLicenceNumber": "",
+    "licensingAuthority": "",
+    "registeredAddress": "",
+    "vatTrn": ""
+  },
+  "contact": {
+    "email": "hello@co-host.pro",
+    "phone": "",
+    "whatsapp": "",
+    "privacyEmail": "hello@co-host.pro",
+    "securityEmail": "hello@co-host.pro"
+  },
+  "privacy": {
+    "popiaInformationOfficer": ""
+  },
+  "legal": {
+    "governingLaw": ""
+  },
+  "hosting": {
+    "dataRegion": ""
+  },
+  "social": {
+    "linkedin": ""
+  }
+}
